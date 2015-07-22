@@ -21,7 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">.</SolutionDir>
-    <RestorePackages>false</RestorePackages>
+    <!--<RestorePackages>false</RestorePackages>-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -132,7 +132,7 @@
     <Content Include="App_Data\testmpass.cer" />
     <Content Include="App_Data\samplempass.pfx" />
     <Content Include="App_Data\testmpass.old.cer" />
-    <Content Include="packages.config" />
+    <!--<Content Include="packages.config" />-->
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
