@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MPass.Sample.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SamlRequestIssuer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://sample.testmpass.gov.md</Value>
+    </Setting>
+    <Setting Name="ServiceCertificate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/App_Data/samplempass.pfx</Value>
+    </Setting>
+    <Setting Name="ServiceCertificatePassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">qN6n31IT86684JO</Value>
+    </Setting>
+    <Setting Name="IdentityProviderCertificate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">~/App_Data/testmpass.cer</Value>
+    </Setting>
+    <Setting Name="SamlMessageTimeout" Type="System.TimeSpan" Scope="Application">
+      <Value Profile="(Default)">00:10:00</Value>
+    </Setting>
+    <Setting Name="SamlLoginDestination" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://testmpass.gov.md/login/saml</Value>
+    </Setting>
+    <Setting Name="SamlLogoutDestination" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://testmpass.gov.md/logout/saml</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

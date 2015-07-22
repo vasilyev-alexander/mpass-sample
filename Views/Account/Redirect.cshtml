@@ -1,0 +1,25 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>redirecting to MPass...</title>
+</head>
+<body onload="document.forms[0].submit();">
+    <form method="POST" action='@ViewBag.IdPUrl'>
+        <input type="hidden" name="@ViewBag.SAMLVariable" value="@ViewBag.SAMLMessage" />
+        <input type="hidden" name="RelayState" value="@ViewBag.RelayState" />
+
+        <noscript>
+            <p>
+                <strong>Note:</strong>
+                Since your browser does not support Javascript, please click the Continue button once to proceed.
+            </p>
+            <div>
+                <input type="submit" value="Continue" />
+            </div>
+        </noscript>
+    </form>
+</body>
+</html>

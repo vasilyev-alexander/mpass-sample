@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>MPass Sample Service</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <header></header>
+
+    <div role="main">
+        @if (User.Identity.IsAuthenticated)
+        {
+            <div>Authenticated as: <strong>@User.Identity.Name</strong></div>
+            var attributes = TempData["Attributes"] as IDictionary<string, IList<string>>;
+            if (attributes != null)
+            {
+                foreach (var attribute in attributes)
+                {
+                    foreach (var value in attribute.Value)
+                    {
+                        <div>@attribute.Key: <strong>@value</strong></div>
+                    }
+                }
+            }
+            <div>Relay State: @TempData["RelayState"]</div>
+            @Html.ActionLink("LOG OUT", "Logout", "Account")
+        }
+        else
+        {
+            @Html.ActionLink("LOG IN", "Login", "Account")
+        }
+    </div>
+
+    <footer role="contentinfo"></footer>
+</body>
+</html>
